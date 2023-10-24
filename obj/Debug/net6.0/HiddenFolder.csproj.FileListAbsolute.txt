@@ -1,0 +1,14 @@
+C:\Users\Jaffa\Desktop\learn\c#\HiddenFolder\obj\Debug\net6.0\HiddenFolder.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jaffa\Desktop\learn\c#\HiddenFolder\obj\Debug\net6.0\HiddenFolder.AssemblyInfoInputs.cache
+C:\Users\Jaffa\Desktop\learn\c#\HiddenFolder\obj\Debug\net6.0\HiddenFolder.AssemblyInfo.cs
+C:\Users\Jaffa\Desktop\learn\c#\HiddenFolder\obj\Debug\net6.0\HiddenFolder.csproj.CoreCompileInputs.cache
+C:\Users\Jaffa\Desktop\learn\c#\HiddenFolder\bin\Debug\net6.0\HiddenFolder.exe
+C:\Users\Jaffa\Desktop\learn\c#\HiddenFolder\bin\Debug\net6.0\HiddenFolder.deps.json
+C:\Users\Jaffa\Desktop\learn\c#\HiddenFolder\bin\Debug\net6.0\HiddenFolder.runtimeconfig.json
+C:\Users\Jaffa\Desktop\learn\c#\HiddenFolder\bin\Debug\net6.0\HiddenFolder.dll
+C:\Users\Jaffa\Desktop\learn\c#\HiddenFolder\bin\Debug\net6.0\HiddenFolder.pdb
+C:\Users\Jaffa\Desktop\learn\c#\HiddenFolder\obj\Debug\net6.0\HiddenFolder.dll
+C:\Users\Jaffa\Desktop\learn\c#\HiddenFolder\obj\Debug\net6.0\refint\HiddenFolder.dll
+C:\Users\Jaffa\Desktop\learn\c#\HiddenFolder\obj\Debug\net6.0\HiddenFolder.pdb
+C:\Users\Jaffa\Desktop\learn\c#\HiddenFolder\obj\Debug\net6.0\HiddenFolder.genruntimeconfig.cache
+C:\Users\Jaffa\Desktop\learn\c#\HiddenFolder\obj\Debug\net6.0\ref\HiddenFolder.dll
