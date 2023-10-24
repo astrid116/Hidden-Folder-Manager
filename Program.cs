@@ -141,7 +141,10 @@ namespace HiddenFolder
                                         if (line != path + " " + dirname)
                                             sw.WriteLine(line);
                                         else
-                                            line = sr.ReadLine();
+                                            for (int i = 0; i <= 2; i++)
+                                            {
+                                                line = sr.ReadLine();
+                                            }
                                     }
                                 }
 
