@@ -60,6 +60,7 @@ namespace HiddenFolder
                                     using StreamWriter sw = File.AppendText(configDir + "\\config");
                                     sw.WriteLine(Directory.GetCurrentDirectory() + " " + dirname);
                                     sw.WriteLine(currentDateTime);
+                                    sw.WriteLine("\n");
                                 }
                                 else
                                 {
@@ -69,6 +70,7 @@ namespace HiddenFolder
                                     using StreamWriter sw = File.AppendText(configDir + "\\config");
                                     sw.WriteLine(@path + " " + dirname);
                                     sw.WriteLine(currentDateTime);
+                                    sw.WriteLine("\n");
                                 }
                             }
                         }
@@ -110,7 +112,10 @@ namespace HiddenFolder
                                         if (line != Directory.GetCurrentDirectory() + " " + dirname)
                                             sw.WriteLine(line);
                                         else
-                                            line = sr.ReadLine();
+                                            for (int i = 0; i <= 2; i++)
+                                            {
+                                                line = sr.ReadLine();
+                                            }
                                     }
                                 }
 
@@ -180,6 +185,7 @@ namespace HiddenFolder
                                 using StreamWriter sw = File.AppendText(configDir + "\\config");
                                 sw.WriteLine(Directory.GetCurrentDirectory() + " " + dirname);
                                 sw.WriteLine(currentDateTime);
+                                sw.WriteLine("\n");
                             }
                             else
                             {
@@ -188,6 +194,7 @@ namespace HiddenFolder
                                 using StreamWriter sw = File.AppendText(configDir + "\\config");
                                 sw.WriteLine(@path + " " + dirname);
                                 sw.WriteLine(currentDateTime);
+                                sw.WriteLine("\n");
                             }
                         }
                         path = "";
