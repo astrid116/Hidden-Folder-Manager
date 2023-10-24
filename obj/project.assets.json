@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Jaffa\\Desktop\\learn\\c#\\HiddenFolder\\HiddenFolder.csproj",
+      "projectUniqueName": "C:\\Users\\Jaffa\\Desktop\\repos\\Hidden-Folder-Manager\\HiddenFolder.csproj",
       "projectName": "HiddenFolder",
-      "projectPath": "C:\\Users\\Jaffa\\Desktop\\learn\\c#\\HiddenFolder\\HiddenFolder.csproj",
+      "projectPath": "C:\\Users\\Jaffa\\Desktop\\repos\\Hidden-Folder-Manager\\HiddenFolder.csproj",
       "packagesPath": "C:\\Users\\Jaffa\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Jaffa\\Desktop\\learn\\c#\\HiddenFolder\\obj\\",
+      "outputPath": "C:\\Users\\Jaffa\\Desktop\\repos\\Hidden-Folder-Manager\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Jaffa\\AppData\\Roaming\\NuGet\\NuGet.Config",

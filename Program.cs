@@ -12,6 +12,7 @@ namespace HiddenFolder
     {
         static void Main(string[] args)
         {
+            DateTime currentDateTime = DateTime.Now;
             string input;
             string path;
             string dirname;
@@ -58,6 +59,7 @@ namespace HiddenFolder
                                     di.Attributes = FileAttributes.Hidden;
                                     using StreamWriter sw = File.AppendText(configDir + "\\config");
                                     sw.WriteLine(Directory.GetCurrentDirectory() + " " + dirname);
+                                    sw.WriteLine(currentDateTime);
                                 }
                                 else
                                 {
@@ -66,6 +68,7 @@ namespace HiddenFolder
                                     di.Attributes = FileAttributes.Hidden;
                                     using StreamWriter sw = File.AppendText(configDir + "\\config");
                                     sw.WriteLine(@path + " " + dirname);
+                                    sw.WriteLine(currentDateTime);
                                 }
                             }
                         }
@@ -106,6 +109,8 @@ namespace HiddenFolder
                                     {
                                         if (line != Directory.GetCurrentDirectory() + " " + dirname)
                                             sw.WriteLine(line);
+                                        else
+                                            line = sr.ReadLine();
                                     }
                                 }
 
@@ -130,6 +135,8 @@ namespace HiddenFolder
                                     {
                                         if (line != path + " " + dirname)
                                             sw.WriteLine(line);
+                                        else
+                                            line = sr.ReadLine();
                                     }
                                 }
 
@@ -172,6 +179,7 @@ namespace HiddenFolder
                                 di.Attributes = FileAttributes.Hidden;
                                 using StreamWriter sw = File.AppendText(configDir + "\\config");
                                 sw.WriteLine(Directory.GetCurrentDirectory() + " " + dirname);
+                                sw.WriteLine(currentDateTime);
                             }
                             else
                             {
@@ -179,6 +187,7 @@ namespace HiddenFolder
                                 di.Attributes = FileAttributes.Hidden;
                                 using StreamWriter sw = File.AppendText(configDir + "\\config");
                                 sw.WriteLine(@path + " " + dirname);
+                                sw.WriteLine(currentDateTime);
                             }
                         }
                         path = "";
