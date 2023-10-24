@@ -200,6 +200,12 @@ namespace HiddenFolder
                     Console.WriteLine(Directory.GetCurrentDirectory());
                 }
 
+                else if(input == "delconfig")
+                {
+                    File.Delete(configDir + "\\config");
+                    Environment.Exit(0);
+                }
+
                 else if(input == "h" || input == "help")
                 {
                     Console.WriteLine("c / create: Creates a hidden directory.");
