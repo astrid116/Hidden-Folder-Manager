@@ -71,9 +71,9 @@ namespace HiddenFolder
                         }
                         path = "";
                     }
-                    catch (Exception e)
+                    catch
                     {
-                        Console.WriteLine("The specified path doesn't exists." + e);
+                        Console.WriteLine("The specified path doesn't exists.");
                     }
                 }
 
