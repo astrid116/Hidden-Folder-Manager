@@ -228,7 +228,14 @@ namespace HiddenFolder
                     Console.WriteLine("a / add: Makes an existing directory hidden, and logs it.");
                     Console.WriteLine("rm / remove: Makes a hidden directory visible again, and removes it from the log.");
                     Console.WriteLine("l / list: Lists the log.");
+                    Console.WriteLine("cls / clear: Clears the screen.");
                     Console.WriteLine("pwd: Reveals your path.");
+                    Console.WriteLine("delconfig: Deletes the config file.");
+                }
+
+                else if(input == "cls" || input == "clear")
+                {
+                    Console.Clear();
                 }
 
                 else
