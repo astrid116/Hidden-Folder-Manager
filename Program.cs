@@ -69,12 +69,12 @@ namespace HiddenFolder
                                 }
                             }
                         }
+                        path = "";
                     }
                     catch (Exception e)
                     {
                         Console.WriteLine("The specified path doesn't exists." + e);
                     }
-                    path = "";
                 }
 
                 else if (input == "rm" || input == "remove")
@@ -142,12 +142,12 @@ namespace HiddenFolder
                                 di.Attributes = FileAttributes.Normal;
                             }
                         }
+                        path = "";
                     }   
                     catch
                     {
                         Console.WriteLine("The specified path doesn't exists.");
                     }
-                    path = "";
                 }
 
                 else if(input == "a" || input == "add")
@@ -181,12 +181,12 @@ namespace HiddenFolder
                                 sw.WriteLine(@path + " " + dirname);
                             }
                         }
+                        path = "";
                     }
                     catch
                     {
                         Console.WriteLine("The specified path doesn't exists.");
                     }
-                    path = "";
                 }
 
                 else if(input == "l" || input == "list")
