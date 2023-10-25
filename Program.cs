@@ -65,6 +65,7 @@ namespace HiddenFolder
                                     sw.WriteLine(Directory.GetCurrentDirectory() + " " + dirname);
                                     sw.WriteLine(currentDateTime);
                                     sw.WriteLine("\n");
+                                    Console.WriteLine("Successfully created directory at " + Directory.GetCurrentDirectory() + " with name: " + dirname);
                                 }
                                 else
                                 {
@@ -77,6 +78,7 @@ namespace HiddenFolder
                                     sw.WriteLine(@path + " " + dirname);
                                     sw.WriteLine(currentDateTime);
                                     sw.WriteLine("\n");
+                                    Console.WriteLine("Successfully created directory at " + @path + " with name '" + dirname + "'");
                                 }
                             }
                         }
@@ -140,6 +142,7 @@ namespace HiddenFolder
                                 {
                                     Attributes = FileAttributes.Normal
                                 };
+                                Console.WriteLine("Succesfully removed invisibility from directory '" + dirname + "' at: " + Directory.GetCurrentDirectory());
                             }
                             else
                             {
@@ -173,6 +176,7 @@ namespace HiddenFolder
                                 {
                                     Attributes = FileAttributes.Normal
                                 };
+                                Console.WriteLine("Successfully removed invisibility from directory '" + dirname + "' at: " + @path);
                             }
                         }
                         path = "";
@@ -213,6 +217,7 @@ namespace HiddenFolder
                                 sw.WriteLine(Directory.GetCurrentDirectory() + " " + dirname);
                                 sw.WriteLine(currentDateTime);
                                 sw.WriteLine("\n");
+                                Console.WriteLine("Successfully added invisibility to directory '" + dirname + "' at: " + Directory.GetCurrentDirectory());
                             }
                             else
                             {
@@ -224,6 +229,7 @@ namespace HiddenFolder
                                 sw.WriteLine(@path + " " + dirname);
                                 sw.WriteLine(currentDateTime);
                                 sw.WriteLine("\n");
+                                Console.WriteLine("Successfully added invisibility to directory '" + dirname + "' at: " + @path);
                             }
                         }
                         path = "";
