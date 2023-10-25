@@ -284,11 +284,12 @@ namespace HiddenFolder
                     Console.WriteLine("delconfig: Deletes the config file.");
                     Console.WriteLine("cls / clear: Clears the console.");
                 }
-
+                
                 else
                 {
                     Console.WriteLine("Wrong command.");
                 }
+                input = "";
             }
         }
     }
