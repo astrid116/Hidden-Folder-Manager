@@ -158,8 +158,12 @@ namespace HiddenFolder
                             }
                         }
                         path = "";
-                    }   
-                    catch
+                    }
+                    catch (FileNotFoundException)
+                    {
+                        Console.WriteLine("The specified directory doesn't exists.");
+                    }
+                    catch (Exception)
                     {
                         Console.WriteLine("The specified path doesn't exists.");
                     }
@@ -202,7 +206,11 @@ namespace HiddenFolder
                         }
                         path = "";
                     }
-                    catch
+                    catch (FileNotFoundException)
+                    {
+                        Console.WriteLine("The specified directory doesn't exists.");
+                    }
+                    catch (Exception)
                     {
                         Console.WriteLine("The specified path doesn't exists.");
                     }
@@ -211,7 +219,14 @@ namespace HiddenFolder
                 else if(input == "l" || input == "list")
                 {
                     string list = File.ReadAllText(configDir + "\\config");
-                    Console.WriteLine(list);
+                    if (list.Length == 0)
+                    {
+                        Console.WriteLine("The config file is empty.");
+                    }
+                    else
+                    {
+                        Console.WriteLine(list);
+                    }
                 }
 
                 else if(input == "pwd")
@@ -225,6 +240,11 @@ namespace HiddenFolder
                     Environment.Exit(0);
                 }
 
+                else if (input == "cls" || input == "clear")
+                {
+                    Console.Clear();
+                }
+
                 else if(input == "h" || input == "help")
                 {
                     Console.WriteLine("c / create: Creates a hidden directory.");
@@ -234,11 +254,7 @@ namespace HiddenFolder
                     Console.WriteLine("cls / clear: Clears the screen.");
                     Console.WriteLine("pwd: Reveals your path.");
                     Console.WriteLine("delconfig: Deletes the config file.");
-                }
-
-                else if(input == "cls" || input == "clear")
-                {
-                    Console.Clear();
+                    Console.WriteLine("cls / clear: Clears the console.");
                 }
 
                 else
