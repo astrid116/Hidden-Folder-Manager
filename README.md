@@ -1,4 +1,5 @@
 #Hidden Folder Manager
+
 c / create: Creates a hidden directory.
 
 a / add: Makes an existing directory hidden, and logs it.
