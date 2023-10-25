@@ -20,8 +20,10 @@ namespace HiddenFolder
             if (!File.Exists(configDir + "\\config"))
             {
                 File.Create(configDir + "\\config");
-                DirectoryInfo di = new DirectoryInfo(configDir + "\\config");
-                di.Attributes = FileAttributes.Hidden;
+                _ = new DirectoryInfo(configDir + "\\config")
+                {
+                    Attributes = FileAttributes.Hidden
+                };
                 Console.WriteLine("Succesfully initialized config file!");
             }
 
@@ -55,8 +57,10 @@ namespace HiddenFolder
                                 if (path == "")
                                 {
                                     Directory.CreateDirectory(Directory.GetCurrentDirectory() + "\\" + dirname);
-                                    DirectoryInfo di = new DirectoryInfo(Directory.GetCurrentDirectory() + "\\" + dirname);
-                                    di.Attributes = FileAttributes.Hidden;
+                                    DirectoryInfo di = new DirectoryInfo(Directory.GetCurrentDirectory() + "\\" + dirname)
+                                    {
+                                        Attributes = FileAttributes.Hidden
+                                    };
                                     using StreamWriter sw = File.AppendText(configDir + "\\config");
                                     sw.WriteLine(Directory.GetCurrentDirectory() + " " + dirname);
                                     sw.WriteLine(currentDateTime);
@@ -65,8 +69,10 @@ namespace HiddenFolder
                                 else
                                 {
                                     Directory.CreateDirectory(@path + "\\" + dirname);
-                                    DirectoryInfo di = new DirectoryInfo(@path + "\\" + dirname);
-                                    di.Attributes = FileAttributes.Hidden;
+                                    DirectoryInfo di = new DirectoryInfo(@path + "\\" + dirname)
+                                    {
+                                        Attributes = FileAttributes.Hidden
+                                    };
                                     using StreamWriter sw = File.AppendText(configDir + "\\config");
                                     sw.WriteLine(@path + " " + dirname);
                                     sw.WriteLine(currentDateTime);
@@ -121,11 +127,15 @@ namespace HiddenFolder
 
                                 File.Delete(configDir + "\\config");
                                 File.Move(tempFile, configDir + "\\config");
-                                DirectoryInfo diconf = new DirectoryInfo(configDir + "\\config");
-                                diconf.Attributes = FileAttributes.Hidden;
+                                DirectoryInfo diconf = new DirectoryInfo(configDir + "\\config")
+                                {
+                                    Attributes = FileAttributes.Hidden
+                                };
 
-                                DirectoryInfo di = new DirectoryInfo(Directory.GetCurrentDirectory() + "\\" + dirname);
-                                di.Attributes = FileAttributes.Normal;
+                                DirectoryInfo di = new DirectoryInfo(Directory.GetCurrentDirectory() + "\\" + dirname)
+                                {
+                                    Attributes = FileAttributes.Normal
+                                };
                             }
                             else
                             {
@@ -150,11 +160,15 @@ namespace HiddenFolder
 
                                 File.Delete(configDir + "\\config");
                                 File.Move(tempFile, configDir + "\\config");
-                                DirectoryInfo diconf = new DirectoryInfo(configDir + "\\config");
-                                diconf.Attributes = FileAttributes.Hidden;
+                                DirectoryInfo diconf = new DirectoryInfo(configDir + "\\config")
+                                {
+                                    Attributes = FileAttributes.Hidden
+                                };
 
-                                DirectoryInfo di = new DirectoryInfo(@path + "\\" + dirname);
-                                di.Attributes = FileAttributes.Normal;
+                                DirectoryInfo di = new DirectoryInfo(@path + "\\" + dirname)
+                                {
+                                    Attributes = FileAttributes.Normal
+                                };
                             }
                         }
                         path = "";
@@ -187,8 +201,10 @@ namespace HiddenFolder
                         {
                             if (path == "")
                             {
-                                DirectoryInfo di = new DirectoryInfo(Directory.GetCurrentDirectory() + "\\" + dirname);
-                                di.Attributes = FileAttributes.Hidden;
+                                DirectoryInfo di = new DirectoryInfo(Directory.GetCurrentDirectory() + "\\" + dirname)
+                                {
+                                    Attributes = FileAttributes.Hidden
+                                };
                                 using StreamWriter sw = File.AppendText(configDir + "\\config");
                                 sw.WriteLine(Directory.GetCurrentDirectory() + " " + dirname);
                                 sw.WriteLine(currentDateTime);
@@ -196,8 +212,10 @@ namespace HiddenFolder
                             }
                             else
                             {
-                                DirectoryInfo di = new DirectoryInfo(@path + "\\" + dirname);
-                                di.Attributes = FileAttributes.Hidden;
+                                DirectoryInfo di = new DirectoryInfo(@path + "\\" + dirname)
+                                {
+                                    Attributes = FileAttributes.Hidden
+                                };
                                 using StreamWriter sw = File.AppendText(configDir + "\\config");
                                 sw.WriteLine(@path + " " + dirname);
                                 sw.WriteLine(currentDateTime);
