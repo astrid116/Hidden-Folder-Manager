@@ -15,3 +15,5 @@ pwd: Reveals your path.
 delconfig: Deletes the config file.
 
 cls / clear: Clears the console.
+
+h / help: Lists instructions for the program.
