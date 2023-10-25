@@ -1,4 +1,4 @@
-#Hidden Folder Manager
+# Hidden Folder Manager
 
 c / create: Creates a hidden directory.
 
