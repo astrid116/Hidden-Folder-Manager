@@ -241,7 +241,7 @@ namespace HiddenFolder
                     string list = File.ReadAllText(configDir + "\\config");
                     if (list.Length == 0)
                     {
-                        Console.WriteLine("The config file is empty.");
+                        Console.WriteLine("The config file is empty.\n");
                     }
                     else
                     {
@@ -274,7 +274,7 @@ namespace HiddenFolder
                     Console.WriteLine("cls / clear: Clears the screen.");
                     Console.WriteLine("pwd: Reveals your path.");
                     Console.WriteLine("delconfig: Deletes the config file.");
-                    Console.WriteLine("cls / clear: Clears the console.");
+                    Console.WriteLine("cls / clear: Clears the console.\n");
                 }
                 
                 else
