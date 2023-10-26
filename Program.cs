@@ -13,7 +13,6 @@ namespace HiddenFolder
         static void Main(string[] args)
         {
             Console.Title = "Hidden Folder Manager Made By astrid";
-            DateTime currentDateTime = DateTime.Now;
             string input;
             string path;
             string dirname;
@@ -51,6 +50,7 @@ namespace HiddenFolder
                         {
                             if (path == "")
                             {
+                                DateTime currentDateTime = DateTime.Now;
                                 Directory.CreateDirectory(Directory.GetCurrentDirectory() + "\\" + dirname);
                                 DirectoryInfo di = new DirectoryInfo(Directory.GetCurrentDirectory() + "\\" + dirname)
                                 {
@@ -66,6 +66,7 @@ namespace HiddenFolder
                             {
                                 if (Directory.Exists(@path))
                                 {
+                                    DateTime currentDateTime = DateTime.Now;
                                     Directory.CreateDirectory(@path + "\\" + dirname);
                                     DirectoryInfo di = new DirectoryInfo(@path + "\\" + dirname)
                                     {
@@ -202,6 +203,7 @@ namespace HiddenFolder
                             {
                                 Attributes = FileAttributes.Hidden
                             };
+                            DateTime currentDateTime = DateTime.Now;
                             using StreamWriter sw = File.AppendText(configDir + "\\config");
                             sw.WriteLine(Directory.GetCurrentDirectory() + " " + dirname);
                             sw.WriteLine(currentDateTime);
@@ -216,6 +218,7 @@ namespace HiddenFolder
                                 {
                                     Attributes = FileAttributes.Hidden
                                 };
+                                DateTime currentDateTime = DateTime.Now;
                                 using StreamWriter sw = File.AppendText(configDir + "\\config");
                                 sw.WriteLine(@path + " " + dirname);
                                 sw.WriteLine(currentDateTime);
