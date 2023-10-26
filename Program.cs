@@ -12,6 +12,7 @@ namespace HiddenFolder
     {
         static void Main(string[] args)
         {
+            Console.Title = "Hidden Folder Manager Made By astrid";
             DateTime currentDateTime = DateTime.Now;
             string input;
             string path;
