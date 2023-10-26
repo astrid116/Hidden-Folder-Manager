@@ -196,38 +196,35 @@ namespace HiddenFolder
                     dirname = Console.ReadLine();
                     try
                     {
-                        if (Directory.Exists(@path))
+                        if (path == "")
                         {
-                            if (path == "")
+                            DirectoryInfo di = new DirectoryInfo(Directory.GetCurrentDirectory() + "\\" + dirname)
                             {
-                                DirectoryInfo di = new DirectoryInfo(Directory.GetCurrentDirectory() + "\\" + dirname)
+                                Attributes = FileAttributes.Hidden
+                            };
+                            using StreamWriter sw = File.AppendText(configDir + "\\config");
+                            sw.WriteLine(Directory.GetCurrentDirectory() + " " + dirname);
+                            sw.WriteLine(currentDateTime);
+                            sw.WriteLine("\n");
+                            Console.WriteLine("Successfully added invisibility to directory '" + dirname + "' at: " + Directory.GetCurrentDirectory() + "\n");
+                        }
+                        else
+                        {
+                            if (Directory.Exists(@path))
+                            {
+                                DirectoryInfo di = new DirectoryInfo(@path + "\\" + dirname)
                                 {
                                     Attributes = FileAttributes.Hidden
                                 };
                                 using StreamWriter sw = File.AppendText(configDir + "\\config");
-                                sw.WriteLine(Directory.GetCurrentDirectory() + " " + dirname);
+                                sw.WriteLine(@path + " " + dirname);
                                 sw.WriteLine(currentDateTime);
                                 sw.WriteLine("\n");
-                                Console.WriteLine("Successfully added invisibility to directory '" + dirname + "' at: " + Directory.GetCurrentDirectory() + "\n");
+                                Console.WriteLine("Successfully added invisibility to directory '" + dirname + "' at: " + @path + "\n");
                             }
                             else
                             {
-                                if (Directory.Exists(@path))
-                                {
-                                    DirectoryInfo di = new DirectoryInfo(@path + "\\" + dirname)
-                                    {
-                                        Attributes = FileAttributes.Hidden
-                                    };
-                                    using StreamWriter sw = File.AppendText(configDir + "\\config");
-                                    sw.WriteLine(@path + " " + dirname);
-                                    sw.WriteLine(currentDateTime);
-                                    sw.WriteLine("\n");
-                                    Console.WriteLine("Successfully added invisibility to directory '" + dirname + "' at: " + @path + "\n");
-                                }
-                                else
-                                {
-                                    Console.WriteLine("The specified path doesn't exists.");
-                                }
+                                Console.WriteLine("The specified path doesn't exists.");
                             }
                         }
                         path = "";
