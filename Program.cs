@@ -24,7 +24,7 @@ namespace HiddenFolder
                 {
                     Attributes = FileAttributes.Hidden
                 };
-                Console.WriteLine("Succesfully initialized config file!");
+                Console.WriteLine("Succesfully initialized config file!\n");
             }
 
             Console.WriteLine("Welcome to Hidden Folder Manager v1.0!");
@@ -59,7 +59,7 @@ namespace HiddenFolder
                                 sw.WriteLine(Directory.GetCurrentDirectory() + " " + dirname);
                                 sw.WriteLine(currentDateTime);
                                 sw.WriteLine("\n");
-                                Console.WriteLine("Successfully created directory at " + Directory.GetCurrentDirectory() + " with name: " + dirname);
+                                Console.WriteLine("Successfully created directory at " + Directory.GetCurrentDirectory() + " with name '" + dirname + "'\n");
                             }
                             else
                             {
@@ -72,7 +72,7 @@ namespace HiddenFolder
                                 sw.WriteLine(@path + " " + dirname);
                                 sw.WriteLine(currentDateTime);
                                 sw.WriteLine("\n");
-                                Console.WriteLine("Successfully created directory at " + @path + " with name '" + dirname + "'");
+                                Console.WriteLine("Successfully created directory at " + @path + " with name '" + dirname + "'\n");
                             }
                         }
                         path = "";
@@ -129,7 +129,7 @@ namespace HiddenFolder
                             {
                                 Attributes = FileAttributes.Normal
                             };
-                            Console.WriteLine("Succesfully removed invisibility from directory '" + dirname + "' at: " + Directory.GetCurrentDirectory());
+                            Console.WriteLine("Succesfully removed invisibility from directory '" + dirname + "' at: " + Directory.GetCurrentDirectory() + "\n");
                         }
                         else
                         {
@@ -163,7 +163,7 @@ namespace HiddenFolder
                             {
                                 Attributes = FileAttributes.Normal
                             };
-                            Console.WriteLine("Successfully removed invisibility from directory '" + dirname + "' at: " + @path);
+                            Console.WriteLine("Successfully removed invisibility from directory '" + dirname + "' at: " + @path + "\n");
                         }
                         path = "";
                     }
@@ -197,7 +197,7 @@ namespace HiddenFolder
                             sw.WriteLine(Directory.GetCurrentDirectory() + " " + dirname);
                             sw.WriteLine(currentDateTime);
                             sw.WriteLine("\n");
-                            Console.WriteLine("Successfully added invisibility to directory '" + dirname + "' at: " + Directory.GetCurrentDirectory());
+                            Console.WriteLine("Successfully added invisibility to directory '" + dirname + "' at: " + Directory.GetCurrentDirectory() + "\n");
                         }
                         else
                         {
@@ -209,7 +209,7 @@ namespace HiddenFolder
                             sw.WriteLine(@path + " " + dirname);
                             sw.WriteLine(currentDateTime);
                             sw.WriteLine("\n");
-                            Console.WriteLine("Successfully added invisibility to directory '" + dirname + "' at: " + @path);
+                            Console.WriteLine("Successfully added invisibility to directory '" + dirname + "' at: " + @path + "\n");
                         }
                         path = "";
                     }
