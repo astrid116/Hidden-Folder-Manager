@@ -115,12 +115,16 @@ namespace HiddenFolder
                                 while ((line = sr.ReadLine()) != null)
                                 {
                                     if (line != Directory.GetCurrentDirectory() + " " + dirname)
+                                    {
                                         sw.WriteLine(line);
+                                    }
                                     else
+                                    {
                                         for (int i = 0; i <= 2; i++)
                                         {
                                             line = sr.ReadLine();
                                         }
+                                    }
                                 }
                             }
 
@@ -151,12 +155,16 @@ namespace HiddenFolder
                                     while ((line = sr.ReadLine()) != null)
                                     {
                                         if (line != path + " " + dirname)
+                                        {
                                             sw.WriteLine(line);
+                                        }
                                         else
+                                        {
                                             for (int i = 0; i <= 2; i++)
                                             {
                                                 line = sr.ReadLine();
                                             }
+                                        }
                                     }
                                 }
 
